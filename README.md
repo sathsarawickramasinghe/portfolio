@@ -163,7 +163,7 @@ npm run dev
 
 * 🌐 Portfolio: https://sathsarawickramasinghe.netlify.app/
 * GitHub: https://github.com/sathsarawickramasinghe/portfolio
-* LinkedIn: https://www.linkedin.com/in/sathsara-wickramasinghe/
+* LinkedIn: https://www.linkedin.com/posts/sathsara-wickramasinghe_portfolio-webdevelopment-react-ugcPost-7479836505532678145-1mIx/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEibEUEB1uBL6kzSf_5KLpanUBQGLoL0WIA
 
 ---
 
