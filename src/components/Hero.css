@@ -1,0 +1,233 @@
+/* Hero Component Styles */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(240, 173, 0, 0.08);
+  border: 1px solid rgba(240, 173, 0, 0.25);
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-title);
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 15px rgba(240, 173, 0, 0.1);
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(240, 173, 0, 0.05);
+    border-color: rgba(240, 173, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(240, 173, 0, 0.25);
+    border-color: rgba(240, 173, 0, 0.5);
+  }
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 800;
+}
+
+.hero-typewriter {
+  color: var(--primary);
+  text-shadow: 0 0 15px rgba(240, 173, 0, 0.4);
+  position: relative;
+}
+
+.hero-typewriter::after {
+  content: '|';
+  position: relative;
+  animation: blink 0.8s infinite;
+  color: var(--light);
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 550px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Glass Terminal Mockup */
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal-accent-glow {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(240, 173, 0, 0.08) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glass-terminal {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(12, 12, 16, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  box-shadow: var(--glow-shadow);
+  overflow: hidden;
+  text-align: left;
+  transition: var(--transition);
+}
+
+.glass-terminal:hover {
+  border-color: var(--border-glass-hover);
+  box-shadow: var(--glow-shadow-hover);
+  transform: translateY(-5px);
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(240, 173, 0, 0.05);
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid rgba(240, 173, 0, 0.08);
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-title {
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.code-line {
+  display: flex;
+  gap: 1rem;
+}
+
+.line-number {
+  color: var(--text-muted-dark);
+  text-align: right;
+  width: 1.5rem;
+  user-select: none;
+}
+
+.code-content {
+  color: var(--white);
+}
+
+.code-keyword { color: #ff79c6; }
+.code-property { color: var(--light); }
+.code-string { color: #f1fa8c; }
+.code-comment { color: var(--text-muted-dark); font-style: italic; }
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    text-align: center;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-badge {
+    margin-bottom: 1rem;
+  }
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  .hero-title span {
+    font-size: 2.6rem;
+  }
+  .hero-description {
+    margin: 0 auto 2rem;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .glass-terminal {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.6rem;
+  }
+  .hero-title span {
+    font-size: 2.1rem;
+  }
+  .hero-badge {
+    font-size: 0.8rem;
+  }
+}
